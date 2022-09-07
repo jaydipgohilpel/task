@@ -1,0 +1,62 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden" style="height: 1000px;">
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          The best offer <br />
+          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+
+        </h1>
+        <h3 class="my-5 display fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          Login Now
+        </h3>
+        <p class=" opacity-70" style="color: hsl(218, 81%, 85%)">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Temporibus, expedita iusto veniam atque, magni tempora mollitia
+          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+          ab ipsum nisi dolorem modi. Quos?
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" name="htForm" required >
+
+              <div class="form-outline ">
+                <label class="form-label" for="form3Example1">Username</label>
+                <input type="text" id="username" class="form-control" required ngModel name="username"
+                  #username="ngModel" />
+                <div *ngIf="username.invalid && username.touched || username.invalid && loginForm.submitted
+                                    " class="error">username can not Empty or invalid</div>
+              </div>
+
+              <div class="form-outline ">
+                <label class="form-label" for="form3Example4">Password</label>
+                <input type="password" id="pass" class="form-control" required minlength="6" maxlength="8" ngModel
+                  name="password" #password="ngModel" />
+
+                <div *ngIf="password.invalid && password.touched
+                    || password.invalid && loginForm.submitted" class="error">Password can not Empty</div>
+                <span
+                  *ngIf="password.invalid && password.touched && password.errors?.['minlength'] || password.errors?.['maxlength']
+                    || password.invalid && loginForm.submitted && password.errors?.['minlength'] || password.errors?.['maxlength']"
+                  class="error">password must be 6 to 8 character</span>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mt-4">
+                Log In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

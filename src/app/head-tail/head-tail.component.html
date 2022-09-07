@@ -1,0 +1,54 @@
+<body style="overflow: auto;">
+  <!-- Section: Design Block -->
+  <section class="background-radial-gradient overflow-hidden" style="height:1000px;">
+    <div class="container px-4 py-5     text-center text-lg-start ">
+      <!--  px-md-5  -->
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-12 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+          <div class="card bg-glass">
+            <div class="card-body  " style="padding-bottom: 3rem!important;padding-right: 3rem!important;">
+              <div class="row text-center">
+                <div class="col-md-8 ">
+                  <form #htForm="ngForm" (ngSubmit)="select(htForm)" name="htForm" required>
+                    <span>
+                      <h4>Head Tail Task [mat-select]</h4>
+                      <mat-form-field appearance="fill">
+                        <mat-label>choose any options</mat-label>
+                        <mat-select ngModel id="choose" required name="choose" #choose="ngModel">
+                          <mat-option *ngFor="let e of title" [value]="e.value">{{e.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <input type="submit" name="Save" class="btn btn-primary btn-block mt-4 m-5" ngModel="submit">
+                    </span>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-12 ">
+                <div class="d-flex text-center align-content-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="    text-center text-lg-start my-5">
+        <!-- py-5  px-md-5-->
+        <div class="row  gx-lg-5 align-items-center mb-5">
+          <div class="col-lg-12  mb-5 mb-lg-0 position-relative">
+            <div id="" class="position-absolute rounded-circle shadow-5-strong"></div>
+            <div id="" class="position-absolute shadow-5-strong"></div>
+            <div class="card bg-glass">
+              <div class="card-body  d-flex" id="cardbody1"
+                style="padding-bottom: 3rem!important;padding-right: 3rem!important;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

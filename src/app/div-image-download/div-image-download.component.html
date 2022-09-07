@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+<body>
+  <div #screen id="div">
+
+
+
+    <div class="row w-100 m-0">
+      <div class="col-6 bg-primary height p-1" >
+        <img src='./../../assets/images/c_805646-l_1-k_image.jpg' alt="base64 test" class="p-0 image">
+      </div>
+      <div class="col-6  bg-success height p-1">
+        <img src='./../../assets/images/image-analysis.png' alt="base64 test" class="p-0 image">
+      </div>
+      <div class="col-6 bg-warning height p-1"  >
+
+        <iframe (load)="imageLoad()" src="./../../assets/images/c_805646-l_1-k_image.jpg">
+
+        </iframe>
+      </div>
+      <div class="col-6 bg-info height p-1">
+        <iframe   class="image"  src="https://www.w3schools.com/html/demo_iframe.html" title="W3Schools Free Online Web Tutorials"></iframe>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row text-center">
+    <div class="col-12 bg-transparent">
+      <button class="btn btn-primary" (click)="downloadImage()">Download Image</button>
+    </div>
+  </div><br>
+  <div *ngIf="testImage" style="width: 100%" class="row w-100 m-0 p-0">
+    <img src="{{testImage}}" alt="base64 test" class="p-0">
+  </div>
+
+  <div id="download">
+    <img #canvas>
+    <a #downloadLink></a>
+  </div>
+</body>
+</html>
+
+
+
